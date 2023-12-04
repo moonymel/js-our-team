@@ -37,10 +37,19 @@ let dipendenti = [
     }
 ];
 
-// MILESTONE 1:
+// MILESTONE 1/2:
+let container = document.getElementById('ms2');
+
 for(let i=0; i<dipendenti.length; i++){
 
-    console.log(dipendenti[i]);
- 
+    let string = document.createElement('h2');
+    let nome = dipendenti[i].nome;
+    let ruolo = dipendenti[i].ruolo;
+    let foto = dipendenti[i].foto;
+
+    string.innerText = `${nome}, ${ruolo}, ${foto}`;
+    container.appendChild(string);
+
  }
+ 
 
