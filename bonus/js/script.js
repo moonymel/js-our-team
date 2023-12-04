@@ -37,18 +37,28 @@ let dipendenti = [
     }
 ];
 
-// MILESTONE 1/2:
+// BONUS 1/2:
 let container = document.getElementById('ms2');
 
 for(let i=0; i<dipendenti.length; i++){
 
-    let string = document.createElement('h2');
+    let div = document.createElement('div');
+    div.classList.add('card');
+    div.classList.add('d-inline-block');
+    div.classList.add('m-3');
+    div.style.width = '18rem'
+
     let nome = dipendenti[i].nome;
     let ruolo = dipendenti[i].ruolo;
-    let foto = dipendenti[i].foto;
+    let foto = `<img src="../img/${dipendenti[i].foto}">`;
 
-    string.innerText = `${nome}, ${ruolo}, ${foto}`;
-    container.appendChild(string);
+    // let div_info = document.createElement('div');
+    // div_info.innerText = `${nome}, ${ruolo}`;
+    // div_info.classList.add('card-body');
+
+    div.innerHTML = `${foto} <h3>${nome}</h3> ${ruolo}`;
+
+    container.appendChild(div);
 
  }
  
