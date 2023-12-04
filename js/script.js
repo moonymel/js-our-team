@@ -37,4 +37,10 @@ let dipendenti = [
     }
 ];
 
+// MILESTONE 1:
+for(let i=0; i<dipendenti.length; i++){
+
+    console.log(dipendenti[i]);
+ 
+ }
 
